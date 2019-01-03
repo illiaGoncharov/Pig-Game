@@ -10,7 +10,7 @@ GAME RULES:
 */
 
 // Highlight game rules 
-alert("The game has 2 players, playing in rounds");
+/*alert("The game has 2 players, playing in rounds");
 alert("In each turn, a player rolls a dice as many times as he whishes.");
 alert("Each result get added to his ROUND score.");
 alert("BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn.");
@@ -18,7 +18,9 @@ alert("AND, if the player rolls two 6, ALL his scores get lost. After that, it's
 alert("The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. After that, it's the next player's turn.");
 alert("The first player to reach 200 or Specified Winner Score (bottom of the page) points on GLOBAL score wins the game.");
 alert("You can see whole Game Log in Browser Console (cmd + opt + i then Console)");
-alert("Have Fun!"); 
+alert("Have Fun!"); */
+
+
 
 // Declare whole score for both players (array), round score, active player (0/1), true/false game active, two dices  
 var scores, 
@@ -57,8 +59,6 @@ function doubleSix() {
 	roundScore = 0;
 	document.querySelector('#current-' + activePlayer).textContent = roundScore; 
 	score[activePlayer] = roundScore;
-
-	// Update UI
 	document.querySelector('#score-' + activePlayer).textContent = score[activePlayer];
 
 	// Console log
@@ -106,6 +106,33 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 		} else {} 
 	}
 );
+
+ // Rules button and Modal functionality
+
+var modal,
+	close;
+
+// Get the modal
+modal = document.getElementById('modal');
+// Get the <span> element that closes the modal
+close = document.getElementById("close-btn");
+
+document.querySelector('.btn-rules').addEventListener('click', function() {
+		modal.style.display = "block";
+	}	
+);
+
+// When the user clicks on <span> (x), close the modal
+close.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
 // In case player want to hold current round score 
 document.querySelector('.btn-hold').addEventListener('click', function() {
@@ -177,4 +204,6 @@ function init() {
 
 // New Game button 
 document.querySelector('.btn-new').addEventListener('click', init);
+
+
  

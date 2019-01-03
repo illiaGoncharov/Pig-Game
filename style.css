@@ -138,6 +138,7 @@ i {
 }
 
 .btn-new { top: 45px;}
+.btn-rules { top: 85px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
 #input {
@@ -153,7 +154,7 @@ i {
 }
 
 #input:focus {
-
+    outline: none;
 }
 
 .dice-1,
@@ -172,3 +173,45 @@ i {
 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 200; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content { 
+    position: relative;
+    background-color: white;
+    text-align: center;
+    margin: auto;
+    padding: 40px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+#close-btn {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#close-btn:hover,
+#close-btn:focus {
+    color: #EB4D4D;
+    text-decoration: none;
+    cursor: pointer;
+}

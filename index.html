@@ -10,6 +10,43 @@
     </head>
 
     <body>
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <span id="close-btn">&times;</span>
+            <p> 
+            The game has 2 players, playing in rounds. 
+            <br>
+            <br>
+            In each turn, a player rolls a dice as many times as he whishes. 
+            <br>
+            <br>
+            Each result get added to his ROUND score. 
+            <br>
+            <br>
+            BUT, if the player rolls a 1, all his ROUND score gets lost. 
+            <br>
+            <br>
+            After that, it's the next player's turn. 
+            <br>
+            <br>
+            AND, if the player rolls two 6, ALL his scores get lost. 
+            <br>
+            <br>
+            After that, it's the next player's turn. 
+            <br>
+            <br>
+            The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. 
+            <br>
+            <br>
+            After that, it's the next player's turn. 
+            <br>
+            <br>
+            The first player to reach 200 or Specified Winner Score (bottom of the page) points on GLOBAL score wins the game. 
+            <br>
+            <br>
+            You can see whole Game Log in Browser Console (cmd + opt + i then Console) Have Fun! </p>
+          </div>
+        </div>
         <div class="wrapper clearfix">
             <div class="player-0-panel active">
                 <div class="player-name" id="name-0">Player 0</div>
@@ -30,6 +67,7 @@
             </div>
             
             <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-rules"><i class="ion-ios-plus-outline"></i>Rules</button>
             <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
             <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
             
